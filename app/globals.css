@@ -1,0 +1,409 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --primary: 24 9.8% 10%;
+    --primary-foreground: 60 9.1% 97.8%;
+    --secondary: 60 4.8% 95.9%;
+    --secondary-foreground: 24 9.8% 10%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9.8% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 24 5.4% 63.9%;
+    --radius: 0.75rem;
+    
+    /* Enhanced Vibrant Color Palette */
+    --electric-orange: 25 100% 58%;
+    --electric-orange-light: 25 100% 68%;
+    --electric-orange-dark: 25 100% 48%;
+    --vibrant-purple: 270 91% 65%;
+    --vibrant-purple-light: 270 91% 75%;
+    --vibrant-purple-dark: 270 91% 55%;
+    --neon-green: 142 76% 36%;
+    --neon-green-light: 142 76% 46%;
+    --neon-green-dark: 142 76% 26%;
+    --royal-blue: 217 91% 60%;
+    --royal-blue-light: 217 91% 70%;
+    --royal-blue-dark: 217 91% 50%;
+    --sunset-pink: 340 82% 52%;
+    --sunset-pink-light: 340 82% 62%;
+    --sunset-pink-dark: 340 82% 42%;
+    --golden-yellow: 45 93% 58%;
+    --golden-yellow-light: 45 93% 68%;
+    --golden-yellow-dark: 45 93% 48%;
+    --emerald-teal: 160 84% 39%;
+    --emerald-teal-light: 160 84% 49%;
+    --emerald-teal-dark: 160 84% 29%;
+    --crimson-red: 348 83% 47%;
+    --crimson-red-light: 348 83% 57%;
+    --crimson-red-dark: 348 83% 37%;
+    --pearl-white: 0 0% 98%;
+    --charcoal-black: 0 0% 15%;
+    --warm-cream: 48 100% 96%;
+    --deep-navy: 220 39% 11%;
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+    --primary: 60 9.1% 97.8%;
+    --primary-foreground: 24 9.8% 10%;
+    --secondary: 12 6.5% 15.1%;
+    --secondary-foreground: 60 9.1% 97.8%;
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 60 9.1% 97.8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --ring: 24 5.7% 82.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  /* Enhanced vibrant color utilities */
+  .text-electric-orange {
+    color: hsl(var(--electric-orange));
+  }
+  
+  .text-vibrant-purple {
+    color: hsl(var(--vibrant-purple));
+  }
+  
+  .text-neon-green {
+    color: hsl(var(--neon-green));
+  }
+  
+  .text-royal-blue {
+    color: hsl(var(--royal-blue));
+  }
+  
+  .text-sunset-pink {
+    color: hsl(var(--sunset-pink));
+  }
+  
+  .text-golden-yellow {
+    color: hsl(var(--golden-yellow));
+  }
+  
+  .text-emerald-teal {
+    color: hsl(var(--emerald-teal));
+  }
+  
+  .text-crimson-red {
+    color: hsl(var(--crimson-red));
+  }
+  
+  .bg-electric-orange {
+    background-color: hsl(var(--electric-orange));
+  }
+  
+  .bg-vibrant-purple {
+    background-color: hsl(var(--vibrant-purple));
+  }
+  
+  .bg-neon-green {
+    background-color: hsl(var(--neon-green));
+  }
+  
+  .bg-royal-blue {
+    background-color: hsl(var(--royal-blue));
+  }
+  
+  .bg-sunset-pink {
+    background-color: hsl(var(--sunset-pink));
+  }
+  
+  .bg-golden-yellow {
+    background-color: hsl(var(--golden-yellow));
+  }
+  
+  .bg-emerald-teal {
+    background-color: hsl(var(--emerald-teal));
+  }
+  
+  .bg-crimson-red {
+    background-color: hsl(var(--crimson-red));
+  }
+  
+  .bg-pearl-white {
+    background-color: hsl(var(--pearl-white));
+  }
+  
+  .bg-warm-cream {
+    background-color: hsl(var(--warm-cream));
+  }
+  
+  .bg-deep-navy {
+    background-color: hsl(var(--deep-navy));
+  }
+  
+  /* Enhanced gradient backgrounds */
+  .bg-gradient-electric {
+    background: linear-gradient(135deg, hsl(var(--electric-orange)) 0%, hsl(var(--sunset-pink)) 100%);
+  }
+  
+  .bg-gradient-cosmic {
+    background: linear-gradient(135deg, hsl(var(--vibrant-purple)) 0%, hsl(var(--royal-blue)) 100%);
+  }
+  
+  .bg-gradient-nature {
+    background: linear-gradient(135deg, hsl(var(--neon-green)) 0%, hsl(var(--emerald-teal)) 100%);
+  }
+  
+  .bg-gradient-sunset {
+    background: linear-gradient(135deg, hsl(var(--sunset-pink)) 0%, hsl(var(--electric-orange)) 50%, hsl(var(--golden-yellow)) 100%);
+  }
+  
+  .bg-gradient-ocean {
+    background: linear-gradient(135deg, hsl(var(--royal-blue)) 0%, hsl(var(--emerald-teal)) 100%);
+  }
+  
+  .bg-gradient-fire {
+    background: linear-gradient(135deg, hsl(var(--crimson-red)) 0%, hsl(var(--electric-orange)) 100%);
+  }
+  
+  .bg-gradient-royal {
+    background: linear-gradient(135deg, hsl(var(--vibrant-purple)) 0%, hsl(var(--sunset-pink)) 100%);
+  }
+  
+  /* Enhanced animations */
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-float-slow {
+    animation: floatSlow 6s ease-in-out infinite;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulseGlow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+  }
+  
+  .animate-bounce-gentle {
+    animation: bounceGentle 3s ease-in-out infinite;
+  }
+  
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 20px hsl(var(--electric-orange) / 0.5);
+    }
+    to {
+      box-shadow: 0 0 30px hsl(var(--electric-orange) / 0.8), 0 0 40px hsl(var(--sunset-pink) / 0.3);
+    }
+  }
+  
+  @keyframes floatSlow {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+  }
+  
+  @keyframes pulseGlow {
+    0%, 100% {
+      opacity: 1;
+      box-shadow: 0 0 20px hsl(var(--electric-orange) / 0.4);
+    }
+    50% {
+      opacity: 0.8;
+      box-shadow: 0 0 30px hsl(var(--electric-orange) / 0.6), 0 0 40px hsl(var(--vibrant-purple) / 0.3);
+    }
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  
+  @keyframes bounceGentle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  
+  /* Enhanced hover effects */
+  .hover-lift-glow {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .hover-lift-glow:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15), 0 0 30px hsl(var(--electric-orange) / 0.3);
+  }
+  
+  .hover-glow-electric:hover {
+    box-shadow: 0 0 40px hsl(var(--electric-orange) / 0.6);
+  }
+  
+  .hover-glow-purple:hover {
+    box-shadow: 0 0 40px hsl(var(--vibrant-purple) / 0.6);
+  }
+  
+  .hover-glow-green:hover {
+    box-shadow: 0 0 40px hsl(var(--neon-green) / 0.6);
+  }
+  
+  /* Glass morphism effects */
+  .glass-electric {
+    background: linear-gradient(135deg, hsl(var(--electric-orange) / 0.1), hsl(var(--sunset-pink) / 0.1));
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--electric-orange) / 0.2);
+  }
+  
+  .glass-cosmic {
+    background: linear-gradient(135deg, hsl(var(--vibrant-purple) / 0.1), hsl(var(--royal-blue) / 0.1));
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--vibrant-purple) / 0.2);
+  }
+  
+  /* Enhanced button styles */
+  .btn-electric {
+    @apply bg-gradient-electric text-white font-semibold py-4 px-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-pulse-glow;
+  }
+  
+  .btn-cosmic {
+    @apply bg-gradient-cosmic text-white font-semibold py-4 px-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+  }
+  
+  .btn-nature {
+    @apply bg-gradient-nature text-white font-semibold py-4 px-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+  }
+  
+  /* Interactive elements */
+  .interactive-card {
+    @apply transition-all duration-500 hover:scale-105 hover:rotate-1 cursor-pointer;
+  }
+  
+  .interactive-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 0 30px hsl(var(--electric-orange) / 0.2);
+  }
+  
+  /* Neon text effects */
+  .neon-text {
+    text-shadow: 0 0 10px hsl(var(--electric-orange)), 0 0 20px hsl(var(--electric-orange)), 0 0 30px hsl(var(--electric-orange));
+  }
+  
+  .neon-text-purple {
+    text-shadow: 0 0 10px hsl(var(--vibrant-purple)), 0 0 20px hsl(var(--vibrant-purple)), 0 0 30px hsl(var(--vibrant-purple));
+  }
+  
+  /* Particle background effect */
+  .particle-bg {
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(var(--electric-orange) / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(var(--vibrant-purple) / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, hsl(var(--royal-blue) / 0.05) 0%, transparent 50%);
+    animation: particleFloat 20s ease-in-out infinite;
+  }
+  
+  @keyframes particleFloat {
+    0%, 100% { background-position: 0% 0%, 100% 100%, 50% 50%; }
+    33% { background-position: 100% 0%, 0% 100%, 25% 75%; }
+    66% { background-position: 0% 100%, 100% 0%, 75% 25%; }
+  }
+}
+
+/* Enhanced scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, hsl(var(--pearl-white)), hsl(var(--warm-cream)));
+  border-radius: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, hsl(var(--electric-orange)), hsl(var(--sunset-pink)));
+  border-radius: 6px;
+  border: 2px solid hsl(var(--pearl-white));
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, hsl(var(--electric-orange-dark)), hsl(var(--sunset-pink-dark)));
+}
+
+/* Loading animations */
+.loading-shimmer {
+  background: linear-gradient(90deg, 
+    hsl(var(--pearl-white)) 0%, 
+    hsl(var(--electric-orange) / 0.1) 50%, 
+    hsl(var(--pearl-white)) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Responsive enhancements */
+@media (max-width: 640px) {
+  .mobile-glow {
+    box-shadow: 0 0 20px hsl(var(--electric-orange) / 0.3);
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-friendly {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+}
